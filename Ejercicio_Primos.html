@@ -9,13 +9,23 @@
 <body>
     <h1>Ejemplo de numeros primos</h1>
     <p id="resul"></p>
+    <p id="media"></p>
     <script>
         var numero=Math.trunc(Math.random()*40)+10
+        var cont=0;
+        var suma=0;
         for(i=2;i<numero;i++){
             if(esPrimo(i)){
-                document.getElementById("resul").innerHTML+=i+"<br>"; 
+                document.getElementById("resul").innerHTML+=i+"<br>";
+                suma+=i;
+                console.log(suma)
+                cont++
             }
         }
+
+        media=Math.trunc(suma/cont);
+        document.getElementById("media").innerHTML+=media;
+
         function esPrimo(numero){
             let esPrimo=true
             for(let i=2;i<numero;i++){
