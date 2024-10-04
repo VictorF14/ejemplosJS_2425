@@ -10,13 +10,12 @@
     <h1>Ejemplo de numeros primos</h1>
     <p id="resul"></p>
     <script>
-        var numero=prompt("Dame un numero")
-        if(esPrimo){
-           document.getElementById("resul").innerHTML="El numero es primo"; 
-        }else{
-            document.getElementById("resul").innerHTML="El numero no es primo"; 
+        var numero=Math.trunc(Math.random()*40)+10
+        for(i=2;i<numero;i++){
+            if(esPrimo(i)){
+                document.getElementById("resul").innerHTML+=i+"<br>"; 
+            }
         }
-
         function esPrimo(numero){
             let esPrimo=true
             for(let i=2;i<numero;i++){
