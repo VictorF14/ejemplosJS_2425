@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Primos</title>
+    <script src='Ejercicio_Primos.js'></script>
+</head>
+<body>
+    <h1>Ejemplo de numeros primos</h1>
+    <p id="resul"></p>
+    <script>
+        var numero=prompt("Dame un numero")
+        var esPrimo=true;
+        for(let i=2;i<numero;i++){
+            if(numero%i==0){
+                esPrimo=false;
+            }
+        }
+
+        if(esPrimo){
+           document.getElementById("resul").innerHTML="El numero es primo"; 
+        }else{
+            document.getElementById("resul").innerHTML="El numero no es primo"; 
+        }
+        
+    </script>
+</body>
+</html>
