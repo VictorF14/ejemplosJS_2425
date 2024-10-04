@@ -11,19 +11,21 @@
     <p id="resul"></p>
     <script>
         var numero=prompt("Dame un numero")
-        var esPrimo=true;
-        for(let i=2;i<numero;i++){
-            if(numero%i==0){
-                esPrimo=false;
-            }
-        }
-
         if(esPrimo){
            document.getElementById("resul").innerHTML="El numero es primo"; 
         }else{
             document.getElementById("resul").innerHTML="El numero no es primo"; 
         }
-        
+
+        function esPrimo(numero){
+            let esPrimo=true
+            for(let i=2;i<numero;i++){
+                if(numero%i==0){
+                    esPrimo=false
+                }
+            }
+            return esPrimo
+        }
     </script>
 </body>
 </html>
