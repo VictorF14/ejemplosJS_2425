@@ -23,3 +23,5 @@ var numero=Math.trunc(Math.random()*40)+10
             }
             return esPrimo
         }
+
+        // final del programa
